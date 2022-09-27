@@ -56,3 +56,16 @@ let course = "React - The Complete Guide";
 // Union types
 let course2: string | number = "React - The Complete Guide";
 course2 = 123;
+
+// Functions & types
+function add(a: number, b: number) {
+  return a + b;
+}
+console.log(add(2, 5));
+// add(2, "5"); // Error
+// add(2); // Error
+
+function printOutput(value: any) {
+  console.log(value);
+}
+printOutput(add(5, 2));
