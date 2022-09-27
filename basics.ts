@@ -6,8 +6,9 @@
 let age: number;
 age = 12;
 // age = "12"; // Error
-let userName: string;
+let userName: string | string[];
 userName = "Mohammed";
+userName = ["Mohammed", "Ali"];
 // userName = 12; // Error
 let isStudent: boolean;
 isStudent = true;
@@ -49,3 +50,7 @@ people = [
 // Type inference
 let course = "React - The Complete Guide";
 // course = 123; // Error
+
+// Union types
+let course2: string | number = "React - The Complete Guide";
+course2 = 123;
