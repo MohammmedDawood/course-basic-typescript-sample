@@ -18,10 +18,15 @@ isStudent = true;
 let hobbies: string[];
 hobbies = ["Sports", "Cooking"];
 // hobbies = [100]; // Error
-let person: {
+
+type Person = {
+  // type alias
   name: string;
   age: number;
 };
+
+let person: Person;
+
 person = {
   name: "Mohammed",
   age: 12,
@@ -32,10 +37,7 @@ person = {
 //     isStudent: true // Error
 // };
 
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
 people = [
   {
     name: "Mohammed",
