@@ -12,3 +12,36 @@ userName = "Mohammed";
 let isStudent: boolean;
 isStudent = true;
 // isStudent = 12; // Error
+
+// more complex types
+let hobbies: string[];
+hobbies = ["Sports", "Cooking"];
+// hobbies = [100]; // Error
+let person: {
+  name: string;
+  age: number;
+};
+person = {
+  name: "Mohammed",
+  age: 12,
+};
+// person = {
+//     name: 12",  // Error
+//     age: "12" // Error
+//     isStudent: true // Error
+// };
+
+let people: {
+  name: string;
+  age: number;
+}[];
+people = [
+  {
+    name: "Mohammed",
+    age: 12,
+  },
+  {
+    name: "Ahmed",
+    age: 13,
+  },
+];
