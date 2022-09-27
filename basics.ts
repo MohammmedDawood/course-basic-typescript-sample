@@ -69,3 +69,18 @@ function printOutput(value: any) {
   console.log(value);
 }
 printOutput(add(5, 2));
+
+// Generics flexible types that can work over a variety of types rather than a single one
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+const demoArray = [1, 2, 3];
+const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
+// updatedArray[0].split(" "); // Error
+console.log(updatedArray);
+
+const stringArray = insertAtBeginning(["a", "b", "c"], "d"); // ['d', 'a', 'b', 'c']
+console.log(stringArray[0].split(" ")); // ['d']
+console.log(stringArray);
